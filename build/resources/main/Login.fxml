@@ -7,8 +7,6 @@
 <AnchorPane prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.LoginController">
    <children>
 
-      <-- -->
-
       <HBox layoutY="0" prefHeight="42.0" prefWidth="800.0" style="-fx-background-color: #aace46;" />
 
       <Label layoutX="7.0" layoutY="8.0" text="Selina SAE+">
