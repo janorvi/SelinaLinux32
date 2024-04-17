@@ -1,0 +1,1 @@
+/home/orjuela/IdeaProjects/SelinaLinux32/build/classes/java/main/module-info.class:/home/orjuela/IdeaProjects/SelinaLinux32/build/classes/kotlin/main/org/example/LoginController.class:/home/orjuela/IdeaProjects/SelinaLinux32/build/classes/kotlin/main/org/example/Main.class
