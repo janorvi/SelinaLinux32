@@ -10,18 +10,11 @@ import java.util.*
 
 class LoginController: Initializable {
 
-    @FXML var userTextView: TextField? = null
-    @FXML var gridPanelKeyboard: GridPane? = null
-    @FXML var gridPanelInformation: GridPane? = null
-    @FXML var labelServices: Label? = null
+    @FXML var userTextField: TextField? = null
 
     override fun initialize(location: URL?, resources: ResourceBundle?) {
-        println(userTextView?.text)
+        println(userTextField?.text)
     }
 
-    @FXML fun hidePanels(){
-        labelServices?.isVisible = true
-        gridPanelKeyboard?.isVisible = false
-        gridPanelInformation?.isVisible = false
-    }
+
 }
