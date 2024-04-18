@@ -5,12 +5,14 @@ import javafx.fxml.Initializable
 import javafx.scene.control.Label
 import javafx.scene.control.TextField
 import javafx.scene.layout.GridPane
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.coroutineScope
+import kotlinx.coroutines.launch
 import org.example.data.model.LoginSaeModel
 import org.example.data.network.RetrofitClientMain
 import java.net.URL
 import java.util.*
-import kotlin.coroutines.coroutineContext
 
 class LoginController: Initializable {
 
@@ -23,12 +25,13 @@ class LoginController: Initializable {
         println(userTextView?.text)
     }
 
-    @FXML
-    suspend fun hidePanels(){
+    @FXML fun hidePanels(){
         labelServices?.isVisible = true
         gridPanelKeyboard?.isVisible = false
         gridPanelInformation?.isVisible = false
-        login()
+        CoroutineScope(Dispatchers.IO).launch {
+            login()
+        }
     }
 
     private suspend fun login() {
@@ -40,8 +43,8 @@ class LoginController: Initializable {
             deviceName = "dashfleettest"
         )
 
-        coroutineScope {
+        //coroutineScope {
             RetrofitClientMain.webserviceMain.loginSae(loginRequest)
-        }
+        //}
     }
 }

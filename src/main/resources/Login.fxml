@@ -7,8 +7,6 @@
 <AnchorPane prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.LoginController">
    <children>
 
-      <-- -->
-
       <HBox layoutY="0" prefHeight="42.0" prefWidth="800.0" style="-fx-background-color: #aace46;" />
 
       <Label layoutX="7.0" layoutY="8.0" text="Selina SAE+">
@@ -26,21 +24,21 @@
       <GridPane fx:id="gridPanelInformation" layoutX="55.0" layoutY="108.0">
 
          <columnConstraints>
-            <ColumnConstraints hgrow="SOMETIMES" minWidth="300.0" prefWidth="300.0"/>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="300.0" prefWidth="300.0" />
          </columnConstraints>
          <rowConstraints>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
-            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES"/>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
          </rowConstraints>
-         <Label text="DIGITE SUS CREDENCIALES" textAlignment="CENTER"/>
-         <Label text="USUARIO" GridPane.rowIndex="2"/>
-         <TextField fx:id="userTextView" prefHeight="200.0" prefWidth="200.0" text="Hola" GridPane.rowIndex="3"/>
-         <Label text="CLAVE" GridPane.rowIndex="4"/>
-         <PasswordField GridPane.rowIndex="5"/>
+         <Label text="DIGITE SUS CREDENCIALES" textAlignment="CENTER" />
+         <Label text="USUARIO" GridPane.rowIndex="2" />
+         <TextField fx:id="userTextView" prefHeight="200.0" prefWidth="200.0" text="Hola" GridPane.rowIndex="3" />
+         <Label text="CLAVE" GridPane.rowIndex="4" />
+         <PasswordField GridPane.rowIndex="5" />
       </GridPane>
 
       <GridPane fx:id="gridPanelKeyboard" alignment="TOP_CENTER" layoutX="406.0" layoutY="95.0" maxWidth="500.0" minHeight="291.0" minWidth="291.0" prefHeight="291.0" prefWidth="349.0">
@@ -100,7 +98,7 @@
                <font>
                   <Font size="24.0" />
                </font></Button>
-            <Button mnemonicParsing="false" onAction="#hidePanels" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #96c896;" text="ENTRAR" GridPane.columnIndex="2" GridPane.rowIndex="3">
+            <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #96c896;" text="ENTRAR" GridPane.columnIndex="2" GridPane.rowIndex="3">
                <font>
                   <Font size="19.0" />
                </font></Button>
