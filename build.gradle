@@ -17,8 +17,6 @@ repositories {
 dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib"
 
-    implementation "com.squareup.okhttp:okhttp:4.10.0"
-
     implementation "com.fasterxml.jackson.core:jackson-databind:2.0.1"
 }
 
@@ -28,13 +26,19 @@ javafx {
 }
 
 application {
-    mainClassName = 'org.example.Main'
+    mainClassName = 'org.example.LoginController'
     mainModule = 'org.example'
 }
 
 jlink {
     launcher {
         name = 'launch386'
+    }
+}
+
+jar {
+    manifest {
+        attributes 'Main-Class': 'org.example.LoginController'
     }
 }
 
