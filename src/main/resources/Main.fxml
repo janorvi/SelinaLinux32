@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="480.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.MainController">
+   <children>
+
+      <HBox layoutY="0" prefHeight="42.0" prefWidth="800.0" style="-fx-background-color: #aace46;" />
+
+      <Label layoutX="7.0" layoutY="8.0" text="Selina SAE+">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+
+      <Label layoutX="521.0" layoutY="7.0" text="04/Abr/2024 - 07:30:00 AM">
+         <font>
+            <Font size="20.0" />
+         </font>
+      </Label>
+
+      <AnchorPane fx:id="contentAnchorPane" layoutY="42.0" prefHeight="396.0" prefWidth="800.0">
+         <children>
+
+            <GridPane fx:id="gridPanelInformation" layoutX="55.0" layoutY="108.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" minWidth="300.0" prefWidth="300.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <Label text="DIGITE SUS CREDENCIALES" textAlignment="CENTER" />
+               <Label text="USUARIO" GridPane.rowIndex="2" />
+               <TextField fx:id="userTextView" prefHeight="200.0" prefWidth="200.0" text="Hola" GridPane.rowIndex="3" />
+               <Label text="CLAVE" GridPane.rowIndex="4" />
+               <PasswordField GridPane.rowIndex="5" />
+            </GridPane>
+
+            <GridPane fx:id="gridPanelKeyboard" alignment="TOP_CENTER" layoutX="406.0" layoutY="95.0" maxWidth="500.0" minHeight="291.0" minWidth="291.0" prefHeight="291.0" prefWidth="349.0">
+               <columnConstraints>
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="99.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="99.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="150.0" minWidth="10.0" prefWidth="99.0" />
+               </columnConstraints>
+               <rowConstraints>
+                  <RowConstraints maxHeight="100.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+                  <RowConstraints maxHeight="104.0" minHeight="10.0" prefHeight="100.0" vgrow="SOMETIMES" />
+               </rowConstraints>
+               <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #fdc22b;" text="1" GridPane.columnIndex="0" GridPane.rowIndex="0">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #fdc22b;" text="2" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #fdc22b;" text="3" GridPane.columnIndex="2" GridPane.rowIndex="0">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #fdc22b;" text="4" GridPane.columnIndex="0" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #fdc22b;" text="5" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #fdc22b;" text="6" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #fdc22b;" text="7" GridPane.columnIndex="0" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #fdc22b;" text="8" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #fdc22b;" text="9" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #fe4344;" text="BORRAR" GridPane.columnIndex="0" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="19.0" />
+                  </font>
+               </Button>
+               <Button mnemonicParsing="false" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #fdc22b;" text="0" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="24.0" />
+                  </font>
+               </Button>
+               <Button fx:id="enterButton" mnemonicParsing="false" onAction="#showButtons" prefHeight="60.0" prefWidth="112.0" style="-fx-background-color: #96c896;" text="ENTRAR" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                  <font>
+                     <Font size="19.0" />
+                  </font>
+               </Button>
+            </GridPane>
+
+            <Label fx:id="labelServices" layoutX="252.0" layoutY="74.0" text="Esperando servicios..." visible="false">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+
+         </children>
+      </AnchorPane>
+
+      <HBox layoutY="439.0" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #aace46;" />
+
+      <Button fx:id="functionOneButton" layoutX="206.0" layoutY="448.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: #fdc22b;" text="F1" visible="false">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="functionTwoButton" layoutX="307.0" layoutY="448.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: #fdc22b;" text="F2" visible="false">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="functionThreeButton" layoutX="408.0" layoutY="448.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: #fdc22b;" text="F3" visible="false">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="logoutButton" layoutX="509.0" layoutY="448.0" mnemonicParsing="false" onAction="#hideButtons" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: #fdc22b;" text="SALIR" visible="false">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+
+   </children>
+</AnchorPane>
