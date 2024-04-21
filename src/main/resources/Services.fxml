@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="org.example.ServicesController"
-            prefHeight="400.0" prefWidth="600.0">
-
-    <Label text="Esperando servicios."/>
-
+<?import javafx.scene.text.Font?>
+<AnchorPane prefHeight="396.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.ServicesController">
+    <Label fx:id="labelServices" text="Esperando servicios..." layoutX="252.0" layoutY="74.0">
+        <font>
+            <Font size="27.0" />
+        </font>
+    </Label>
 </AnchorPane>
