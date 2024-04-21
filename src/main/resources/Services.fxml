@@ -5,9 +5,13 @@
 
 <?import javafx.scene.text.Font?>
 <AnchorPane prefHeight="396.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.ServicesController">
-    <Label fx:id="labelServices" text="Esperando servicios..." layoutX="252.0" layoutY="74.0">
-        <font>
-            <Font size="27.0" />
-        </font>
-    </Label>
+    <children>
+
+        <Label fx:id="labelServices" text="Esperando servicios..." layoutX="252.0" layoutY="74.0">
+            <font>
+                <Font size="27.0" />
+            </font>
+        </Label>
+
+    </children>
 </AnchorPane>
