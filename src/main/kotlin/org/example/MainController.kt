@@ -17,6 +17,7 @@ class MainController: Initializable {
 
     private val loginFragmentName = "Login.fxml"
     private val servicesFragmentName = "Services.fxml"
+    private val routeTrackingFragmentName = "RouteTracking.fxml"
 
     private val routesDialogName = "Routes.fxml"
     private val confirmCloseDialogName = "ConfirmClose.fxml"
@@ -25,7 +26,10 @@ class MainController: Initializable {
 
     private var loginController: LoginController? = null
     private var servicesController: ServicesController? = null
+    private var routeTrackingController: RouteTrackingController? = null
     private var routesController: RoutesController? = null
+    private var confirmCloseController: ConfirmCloseController? = null
+    private var messagesController: MessagesController? = null
     private var communicationsController: CommunicationsController? = null
 
     @FXML var contentAnchorPane: AnchorPane? = null
@@ -65,6 +69,15 @@ class MainController: Initializable {
             }
             servicesFragmentName -> {
                 servicesController = fragmentLoader.getController<ServicesController>()
+                servicesController?.initServiceButton?.setOnAction {
+                    openFragment(routeTrackingFragmentName)
+                }
+            }
+            routeTrackingFragmentName -> {
+                routeTrackingController = fragmentLoader.getController<RouteTrackingController>()
+                routeTrackingController?.closeRouteTrackingFragmentButton?.setOnAction {
+                    openFragment(servicesFragmentName)
+                }
             }
         }
 
@@ -76,7 +89,7 @@ class MainController: Initializable {
         val dialogRoot = dialogLoader.load<Parent>()
         val dialogStage = Stage()
 
-        dialogStage.initModality(Modality.WINDOW_MODAL)
+        dialogStage.initModality(Modality.APPLICATION_MODAL)
         dialogStage.initStyle(StageStyle.UNDECORATED)
         dialogStage.scene = Scene(dialogRoot)
 
@@ -89,6 +102,18 @@ class MainController: Initializable {
                 routesController?.firstRouteButton?.setOnAction {
                     openFragment(servicesFragmentName)
                     setButtonsVisibility(functionOneButtonVisibility = true, functionTwoButtonVisibility = true, functionThreeButtonVisibility = true, logoutButtonVisibility = true)
+                    dialogStage.close()
+                }
+            }
+            confirmCloseDialogName -> {
+                confirmCloseController = dialogLoader.getController()
+                confirmCloseController?.closeConfirmCloseDialogButton?.setOnAction {
+                    dialogStage.close()
+                }
+            }
+            messagesDialogName -> {
+                messagesController = dialogLoader.getController()
+                messagesController?.closeMessagesDialogButton?.setOnAction {
                     dialogStage.close()
                 }
             }

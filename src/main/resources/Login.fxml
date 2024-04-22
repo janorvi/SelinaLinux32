@@ -21,7 +21,7 @@
          </rowConstraints>
          <Label text="DIGITE SUS CREDENCIALES" textAlignment="CENTER" />
          <Label text="USUARIO" GridPane.rowIndex="2" />
-         <TextField prefHeight="200.0" prefWidth="200.0" text="Hola" GridPane.rowIndex="3" />
+         <TextField prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
          <Label text="CLAVE" GridPane.rowIndex="4" />
          <PasswordField GridPane.rowIndex="5" />
       </GridPane>

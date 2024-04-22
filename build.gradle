@@ -37,8 +37,8 @@ jlink {
 sourceSets {
     main {
         resources {
-            srcDirs = ["src/main/resources"]
-            includes = ["**/*.css"]
+            srcDirs = ["src/main/resources/"]
+            //includes = ["**/*.css"]
             includes = ["**/*.fxml"]
         }
     }
