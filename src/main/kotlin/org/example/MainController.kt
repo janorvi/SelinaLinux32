@@ -6,6 +6,8 @@ import javafx.fxml.Initializable
 import javafx.scene.Parent
 import javafx.scene.Scene
 import javafx.scene.control.Button
+import javafx.scene.image.Image
+import javafx.scene.image.ImageView
 import javafx.scene.layout.AnchorPane
 import javafx.stage.Modality
 import javafx.stage.Stage
@@ -34,26 +36,33 @@ class MainController: Initializable {
 
     @FXML var contentAnchorPane: AnchorPane? = null
 
+    @FXML var logoImageView: ImageView? = null
+
     @FXML var functionOneButton: Button? = null
     @FXML var functionTwoButton: Button? = null
     @FXML var functionThreeButton: Button? = null
-    @FXML var logoutButton: Button? = null
+    @FXML var functionFourButton: Button? = null
+    @FXML var functionFiveButton: Button? = null
+
+    @FXML var logoutImageView: ImageView? = null
 
     override fun initialize(location: URL?, resources: ResourceBundle?) {
         openFragment(loginFragmentName)
-        functionOneButton?.setOnAction {
+        functionThreeButton?.setOnAction {
             openDialog(confirmCloseDialogName)
         }
-        functionTwoButton?.setOnAction {
+        functionFourButton?.setOnAction {
             openDialog(messagesDialogName)
         }
-        functionThreeButton?.setOnAction {
+        functionFiveButton?.setOnAction {
             openDialog(communicationsDialogName)
         }
-        logoutButton?.setOnAction {
+        logoutImageView?.setOnMouseClicked {
             openFragment(loginFragmentName)
-            setButtonsVisibility(functionOneButtonVisibility = false, functionTwoButtonVisibility = false, functionThreeButtonVisibility = false, logoutButtonVisibility = false)
+            setBottomControlsVisibility(functionOneButtonVisibility = false, functionTwoButtonVisibility = false, functionThreeButtonVisibility = false, functionFourButtonVisibility = false, functionFiveButtonVisibility = false, logoutImageViewVisibility = false)
         }
+        logoImageView?.image = Image(javaClass.getResourceAsStream("/images/dashfleet.png"))
+        logoutImageView?.image = Image(javaClass.getResourceAsStream("/images/cerrar_sesion.png"))
     }
 
     private fun openFragment(fragmentName: String){
@@ -101,7 +110,7 @@ class MainController: Initializable {
                 }
                 routesController?.firstRouteButton?.setOnAction {
                     openFragment(servicesFragmentName)
-                    setButtonsVisibility(functionOneButtonVisibility = true, functionTwoButtonVisibility = true, functionThreeButtonVisibility = true, logoutButtonVisibility = true)
+                    setBottomControlsVisibility(functionOneButtonVisibility = true, functionTwoButtonVisibility = true, functionThreeButtonVisibility = true, functionFourButtonVisibility = true, functionFiveButtonVisibility = true, logoutImageViewVisibility = true)
                     dialogStage.close()
                 }
             }
@@ -128,10 +137,12 @@ class MainController: Initializable {
         dialogStage.showAndWait()
     }
 
-    private fun setButtonsVisibility(functionOneButtonVisibility: Boolean, functionTwoButtonVisibility: Boolean, functionThreeButtonVisibility: Boolean, logoutButtonVisibility: Boolean, ){
+    private fun setBottomControlsVisibility(functionOneButtonVisibility: Boolean, functionTwoButtonVisibility: Boolean, functionThreeButtonVisibility: Boolean, functionFourButtonVisibility: Boolean, functionFiveButtonVisibility: Boolean, logoutImageViewVisibility: Boolean){
         functionOneButton?.isVisible = functionOneButtonVisibility
         functionTwoButton?.isVisible = functionTwoButtonVisibility
         functionThreeButton?.isVisible = functionThreeButtonVisibility
-        logoutButton?.isVisible = logoutButtonVisibility
+        functionFourButton?.isVisible = functionTwoButtonVisibility
+        functionFiveButton?.isVisible = functionThreeButtonVisibility
+        logoutImageView?.isVisible = logoutImageViewVisibility
     }
 }

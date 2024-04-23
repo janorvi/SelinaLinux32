@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
@@ -21,34 +22,59 @@
          </font>
       </Label>
 
-      <AnchorPane fx:id="contentAnchorPane" layoutY="46.0" prefHeight="396.0" prefWidth="800.0" />
+      <AnchorPane fx:id="contentAnchorPane" layoutY="42.0" prefHeight="384.0" prefWidth="800.0">
+         <children>
 
-      <HBox layoutY="435.0" prefHeight="52.0" prefWidth="800.0" style="-fx-background-color: #aace46;" />
+         </children>
+      </AnchorPane>
+
+      <HBox layoutY="425.0" prefHeight="52.0" prefWidth="800.0" style="-fx-background-color: #aace46;" />
+
+      <ImageView fx:id="logoImageView" fitWidth="160.0" layoutX="4.0" layoutY="423.0" pickOnBounds="true" preserveRatio="true" />
 
       <!-- Function buttons -->
 
-      <Button fx:id="functionOneButton" layoutX="206.0" layoutY="442.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: #fdc22b;" text="F1" visible="false">
+      <Button fx:id="functionOneButton" layoutX="174.0" layoutY="432.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="90.0" style="-fx-background-color: #fdc22b;" text="F1" visible="false">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <Button fx:id="functionTwoButton" layoutX="307.0" layoutY="442.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: #fdc22b;" text="F2" visible="false">
+      <Button fx:id="functionTwoButton" layoutX="268.0" layoutY="432.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="90.0" style="-fx-background-color: #fdc22b;" text="F2" visible="false">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <Button fx:id="functionThreeButton" layoutX="408.0" layoutY="442.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: #fdc22b;" text="F3" visible="false">
+      <Button fx:id="functionThreeButton" layoutX="362.0" layoutY="432.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="90.0" style="-fx-background-color: #fdc22b;" text="F3" visible="false">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
-      <Button fx:id="logoutButton" layoutX="509.0" layoutY="442.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="98.0" style="-fx-background-color: #fdc22b;" text="SALIR" visible="false">
+      <Button fx:id="functionFourButton" layoutX="456.0" layoutY="432.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="90.0" style="-fx-background-color: #fdc22b;" text="F4" visible="false">
+         <font>
+            <Font size="19.0" />
+         </font>
+      </Button>
+      <Button fx:id="functionFiveButton" layoutX="550.0" layoutY="432.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="90.0" style="-fx-background-color: #fdc22b;" text="F5" visible="false">
          <font>
             <Font size="19.0" />
          </font>
       </Button>
 
+      <ImageView fx:id="logoutImageView" fitHeight="50.0" layoutX="636.0" layoutY="426.0" pickOnBounds="true" preserveRatio="true" visible="false" />
+
       <!--////////////////////-->
+
+      <Label text="0" layoutX="720.0" layoutY="440.0">
+         <font>
+            <Font size="16.0"/>
+         </font>
+      </Label>
+
+      <Label text="V.3.9.0" layoutX="740.0" layoutY="440.0">
+         <font>
+            <Font size="16.0"/>
+         </font>
+      </Label>
 
    </children>
 </AnchorPane>
