@@ -23,6 +23,7 @@ class MainController: Initializable {
 
     private val routesDialogName = "Routes.fxml"
     private val confirmCloseDialogName = "ConfirmClose.fxml"
+    private val closeDialogName = "Close.fxml"
     private val messagesDialogName = "Messages.fxml"
     private val communicationsDialogName = "Communications.fxml"
 
@@ -31,8 +32,15 @@ class MainController: Initializable {
     private var routeTrackingController: RouteTrackingController? = null
     private var routesController: RoutesController? = null
     private var confirmCloseController: ConfirmCloseController? = null
+    private var closeController: CloseController? = null
     private var messagesController: MessagesController? = null
     private var communicationsController: CommunicationsController? = null
+
+    @FXML var iconOneImageView: ImageView? = null
+    @FXML var iconTwoImageView: ImageView? = null
+    @FXML var iconThreeImageView: ImageView? = null
+    @FXML var iconFourImageView: ImageView? = null
+    @FXML var iconFiveImageView: ImageView? = null
 
     @FXML var contentAnchorPane: AnchorPane? = null
 
@@ -59,8 +67,14 @@ class MainController: Initializable {
         }
         logoutImageView?.setOnMouseClicked {
             openFragment(loginFragmentName)
+            setTopControlsVisibility(iconOneImageViewVisibility = false, iconTwoImageViewVisibility = false, iconThreeImageViewVisibility = false, iconFourImageViewVisibility = false, iconFiveImageViewVisibility = false)
             setBottomControlsVisibility(functionOneButtonVisibility = false, functionTwoButtonVisibility = false, functionThreeButtonVisibility = false, functionFourButtonVisibility = false, functionFiveButtonVisibility = false, logoutImageViewVisibility = false)
         }
+        iconOneImageView?.image = Image(javaClass.getResourceAsStream("/images/icon_one_disabled.png"))
+        iconTwoImageView?.image = Image(javaClass.getResourceAsStream("/images/icon_two_disabled.png"))
+        iconThreeImageView?.image = Image(javaClass.getResourceAsStream("/images/icon_three_disabled.png"))
+        iconFourImageView?.image = Image(javaClass.getResourceAsStream("/images/icon_four_disabled.png"))
+        iconFiveImageView?.image = Image(javaClass.getResourceAsStream("/images/icon_five_disabled.png"))
         logoImageView?.image = Image(javaClass.getResourceAsStream("/images/dashfleet.png"))
         logoutImageView?.image = Image(javaClass.getResourceAsStream("/images/cerrar_sesion.png"))
     }
@@ -110,13 +124,27 @@ class MainController: Initializable {
                 }
                 routesController?.firstRouteButton?.setOnAction {
                     openFragment(servicesFragmentName)
+                    setTopControlsVisibility(iconOneImageViewVisibility = true, iconTwoImageViewVisibility = true, iconThreeImageViewVisibility = true, iconFourImageViewVisibility = true, iconFiveImageViewVisibility = true)
                     setBottomControlsVisibility(functionOneButtonVisibility = true, functionTwoButtonVisibility = true, functionThreeButtonVisibility = true, functionFourButtonVisibility = true, functionFiveButtonVisibility = true, logoutImageViewVisibility = true)
                     dialogStage.close()
                 }
             }
             confirmCloseDialogName -> {
                 confirmCloseController = dialogLoader.getController()
+                confirmCloseController?.successCloseConfirmDialogButton?.setOnAction {
+                    openDialog(closeDialogName)
+                    dialogStage.close()
+                }
                 confirmCloseController?.closeConfirmCloseDialogButton?.setOnAction {
+                    dialogStage.close()
+                }
+            }
+            closeDialogName -> {
+                closeController = dialogLoader.getController()
+                closeController?.successCloseDialogButton?.setOnAction {
+                    openFragment(loginFragmentName)
+                    setTopControlsVisibility(iconOneImageViewVisibility = false, iconTwoImageViewVisibility = false, iconThreeImageViewVisibility = false, iconFourImageViewVisibility = false, iconFiveImageViewVisibility = false)
+                    setBottomControlsVisibility(functionOneButtonVisibility = false, functionTwoButtonVisibility = false, functionThreeButtonVisibility = false, functionFourButtonVisibility = false, functionFiveButtonVisibility = false, logoutImageViewVisibility = false)
                     dialogStage.close()
                 }
             }
@@ -137,12 +165,20 @@ class MainController: Initializable {
         dialogStage.showAndWait()
     }
 
+    private fun setTopControlsVisibility(iconOneImageViewVisibility: Boolean, iconTwoImageViewVisibility: Boolean, iconThreeImageViewVisibility: Boolean, iconFourImageViewVisibility: Boolean, iconFiveImageViewVisibility: Boolean){
+        iconOneImageView?.isVisible = iconOneImageViewVisibility
+        iconTwoImageView?.isVisible = iconTwoImageViewVisibility
+        iconThreeImageView?.isVisible = iconThreeImageViewVisibility
+        iconFourImageView?.isVisible = iconFourImageViewVisibility
+        iconFiveImageView?.isVisible = iconFiveImageViewVisibility
+    }
+
     private fun setBottomControlsVisibility(functionOneButtonVisibility: Boolean, functionTwoButtonVisibility: Boolean, functionThreeButtonVisibility: Boolean, functionFourButtonVisibility: Boolean, functionFiveButtonVisibility: Boolean, logoutImageViewVisibility: Boolean){
         functionOneButton?.isVisible = functionOneButtonVisibility
         functionTwoButton?.isVisible = functionTwoButtonVisibility
         functionThreeButton?.isVisible = functionThreeButtonVisibility
-        functionFourButton?.isVisible = functionTwoButtonVisibility
-        functionFiveButton?.isVisible = functionThreeButtonVisibility
+        functionFourButton?.isVisible = functionFourButtonVisibility
+        functionFiveButton?.isVisible = functionFiveButtonVisibility
         logoutImageView?.isVisible = logoutImageViewVisibility
     }
 }

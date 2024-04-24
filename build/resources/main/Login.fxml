@@ -11,7 +11,8 @@
       <Label text="Digite sus credenciales" layoutX="60.0" layoutY="48.0" >
          <font>
             <Font size="24.0" />
-         </font></Label>
+         </font>
+      </Label>
       <ImageView fx:id="loginInfoImageView" layoutX="150.0" layoutY="78.0" />
       <Label text="USUARIO" layoutX="164.0" layoutY="200.0">
          <font>

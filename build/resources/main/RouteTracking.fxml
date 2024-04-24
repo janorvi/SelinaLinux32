@@ -5,10 +5,10 @@
 
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.control.Button?>
-<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.RouteTrackingController" prefHeight="396.0" prefWidth="800.0">
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.RouteTrackingController" prefHeight="384.0" prefWidth="800.0">
 
     <ImageView fx:id="imageView" fitHeight="396.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true"/>
 
-    <Button fx:id="closeRouteTrackingFragmentButton" layoutX="350.0" layoutY="335.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="112.0" style="-fx-background-color: #fe4344;" text="CERRAR" textFill="WHITE" />
+    <!--<Button fx:id="closeRouteTrackingFragmentButton" layoutX="350.0" layoutY="335.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="112.0" style="-fx-background-color: #fe4344;" text="CERRAR" textFill="WHITE" />-->
 
 </AnchorPane>

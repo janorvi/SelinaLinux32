@@ -4,16 +4,16 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.scene.text.Font?>
-<AnchorPane prefHeight="396.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.ServicesController">
+<AnchorPane prefHeight="384.0" prefWidth="800.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.ServicesController">
     <children>
 
-        <Label fx:id="labelServices" text="Esperando servicios..." layoutX="252.0" layoutY="74.0">
+        <Label fx:id="labelServices" text="Esperando servicios..." layoutX="252.0" layoutY="30.0">
             <font>
                 <Font size="27.0" />
             </font>
         </Label>
 
-        <Button fx:id="initServiceButton" style="-fx-background-color: #96c896;" layoutX="350.0" layoutY="335.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="112.0"  text="INICIAR" textFill="WHITE" />
+        <!--<Button fx:id="initServiceButton" style="-fx-background-color: #96c896;" layoutX="350.0" layoutY="335.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="112.0"  text="INICIAR" textFill="WHITE" />-->
 
     </children>
 </AnchorPane>
