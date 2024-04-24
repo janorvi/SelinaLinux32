@@ -24,7 +24,7 @@
             <Font size="20.0" />
          </font>
       </TextField>
-      <Label layoutX="170.0" layoutY="270.0" text="CLAVE">
+      <Label text="CLAVE" layoutX="170.0" layoutY="270.0">
          <font>
             <Font size="18.0" />
          </font>

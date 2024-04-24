@@ -56,6 +56,9 @@ class MainController: Initializable {
 
     override fun initialize(location: URL?, resources: ResourceBundle?) {
         openFragment(loginFragmentName)
+        functionOneButton?.setOnAction {
+            openFragment(routeTrackingFragmentName)
+        }
         functionThreeButton?.setOnAction {
             openDialog(confirmCloseDialogName)
         }

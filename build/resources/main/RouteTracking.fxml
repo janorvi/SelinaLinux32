@@ -1,13 +1,67 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.control.Button?>
-<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.RouteTrackingController" prefHeight="384.0" prefWidth="800.0">
+<AnchorPane prefHeight="384.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.RouteTrackingController">
 
-    <ImageView fx:id="imageView" fitHeight="396.0" fitWidth="800.0" pickOnBounds="true" preserveRatio="true"/>
+    <ImageView fx:id="imageView" fitHeight="350.0" fitWidth="790.0" layoutX="2.0" layoutY="20.0" />
+
+    <ImageView fx:id="nextBusETAImageView" fitHeight="65.0" fitWidth="65.0" layoutX="20.0" layoutY="112.0" />
+
+    <Label layoutX="92.0" layoutY="110.0" text="Bus adelante:">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+
+    <Label fx:id="nextBusETALabel" layoutX="120.0" layoutY="140.0" text="-----">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+
+    <Label text="Min" layoutX="200.0" layoutY="160.0">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+
+    <ImageView fx:id="currentBusETAImageView" fitHeight="65.0" fitWidth="65.0" layoutX="20.0" layoutY="198.0" />
+
+    <Label fx:id="currentBusETALabel" layoutX="120.0" layoutY="226.0" text="-----">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+
+    <Label text="Min" layoutX="200.0" layoutY="246.0">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+
+    <ImageView fx:id="previousBusETAImageView" fitHeight="65.0" fitWidth="65.0" layoutX="20.0" layoutY="284.0" />
+
+    <Label layoutX="92.0" layoutY="282.0" text="Bus atras:">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+
+    <Label fx:id="previousBusETALabel" layoutX="120.0" layoutY="312.0" text="-----">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+
+    <Label text="Min" layoutX="200.0" layoutY="332.0">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
 
     <!--<Button fx:id="closeRouteTrackingFragmentButton" layoutX="350.0" layoutY="335.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="112.0" style="-fx-background-color: #fe4344;" text="CERRAR" textFill="WHITE" />-->
 
