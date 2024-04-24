@@ -9,15 +9,49 @@
 
     <ImageView fx:id="imageView" fitHeight="350.0" fitWidth="790.0" layoutX="2.0" layoutY="20.0" />
 
-    <ImageView fx:id="nextBusETAImageView" fitHeight="65.0" fitWidth="65.0" layoutX="20.0" layoutY="112.0" />
+    <!--    top labels    -->
 
-    <Label layoutX="92.0" layoutY="110.0" text="Bus adelante:">
+    <!--driver name label -->
+
+    <Label fx:id="driverNameLabel" text="NAME:   -----" layoutX="20.0" layoutY="44.0">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+
+    <!--    route code    -->
+
+    <Label fx:id="routeCodeLabel" text="-----" layoutX="340.0" layoutY="44.0">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+
+    <!--    route name    -->
+
+    <Label text="Proxima Parada:" layoutX="458.0" layoutY="34.0" >
         <font>
             <Font size="16.0" />
         </font>
     </Label>
 
-    <Label fx:id="nextBusETALabel" layoutX="120.0" layoutY="140.0" text="-----">
+    <Label fx:id="nextStopNameLabel" text="-----" layoutX="580.0" layoutY="52.0">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+
+    <!--   next bus ETA   -->
+
+    <ImageView fx:id="nextBusETAImageView" fitHeight="65.0" fitWidth="65.0" layoutX="20.0" layoutY="112.0" />
+
+    <Label text="Bus adelante:" layoutX="92.0" layoutY="110.0">
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+
+    <Label fx:id="nextBusETALabel" text="-----" layoutX="120.0" layoutY="140.0">
         <font>
             <Font size="24.0" />
         </font>
@@ -29,9 +63,11 @@
         </font>
     </Label>
 
+    <!--  current bus ETA -->
+
     <ImageView fx:id="currentBusETAImageView" fitHeight="65.0" fitWidth="65.0" layoutX="20.0" layoutY="198.0" />
 
-    <Label fx:id="currentBusETALabel" layoutX="120.0" layoutY="226.0" text="-----">
+    <Label fx:id="currentBusETALabel" text="-----" layoutX="120.0" layoutY="226.0">
         <font>
             <Font size="24.0" />
         </font>
@@ -43,15 +79,17 @@
         </font>
     </Label>
 
+    <!-- previous bus ETA -->
+
     <ImageView fx:id="previousBusETAImageView" fitHeight="65.0" fitWidth="65.0" layoutX="20.0" layoutY="284.0" />
 
-    <Label layoutX="92.0" layoutY="282.0" text="Bus atras:">
+    <Label text="Bus atras:" layoutX="92.0" layoutY="282.0" >
         <font>
             <Font size="16.0" />
         </font>
     </Label>
 
-    <Label fx:id="previousBusETALabel" layoutX="120.0" layoutY="312.0" text="-----">
+    <Label fx:id="previousBusETALabel" text="-----" layoutX="120.0" layoutY="312.0">
         <font>
             <Font size="24.0" />
         </font>
@@ -60,6 +98,104 @@
     <Label text="Min" layoutX="200.0" layoutY="332.0">
         <font>
             <Font size="16.0" />
+        </font>
+    </Label>
+
+
+    <!--   initial hour   -->
+
+    <Label text="Hora Inicio:" layoutX="262.0" layoutY="110.0" >
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+
+    <Label fx:id="initialHourLabel" text="-----" layoutX="320.0" layoutY="140.0">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+
+    <!--    final hour    -->
+
+    <Label text="Hora Fin:" layoutX="262.0" layoutY="196.0" >
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+
+    <Label fx:id="finalHourLabel" text="-----" layoutX="320.0" layoutY="226.0" >
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+
+    <!--       time       -->
+
+    <Label text="Tiempo:" layoutX="262.0" layoutY="282.0" >
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+
+    <Label fx:id="timeLabel" text="-----" layoutX="320.0" layoutY="312.0">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+
+
+    <!--     next stop    -->
+
+    <Label text="Proxima Parada:" layoutX="518.0" layoutY="110.0" >
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+
+    <Label fx:id="nextStopLabel" text="-----" layoutX="580.0" layoutY="140.0" >
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+
+    <!--       speed      -->
+
+    <Label text="Velocidad:" layoutX="518.0" layoutY="196.0" >
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+
+    <Label fx:id="speedLabel" text="-----" layoutX="580.0" layoutY="226.0" >
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+
+    <Label text="km/h" layoutX="720.0" layoutY="244.0">
+        <font>
+            <Font size="20.0" />
+        </font>
+    </Label>
+
+    <!--next stop distance-->
+
+    <Label text="Distancia proxima parada:" layoutX="518.0" layoutY="282.0" >
+        <font>
+            <Font size="16.0" />
+        </font>
+    </Label>
+
+    <Label fx:id="nextStopDistanceLabel" text="-----" layoutX="580.0" layoutY="312.0">
+        <font>
+            <Font size="24.0" />
+        </font>
+    </Label>
+
+    <Label text="Mts" layoutX="720" layoutY="332.0">
+        <font>
+            <Font size="20.0" />
         </font>
     </Label>
 
