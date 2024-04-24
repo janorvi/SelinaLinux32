@@ -4,7 +4,7 @@
 <?import javafx.scene.layout.*?>
 
 <?import javafx.scene.text.Font?>
-<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.MessagesController" prefHeight="400.0" prefWidth="600.0">
+<AnchorPane xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="org.example.MessagesController" prefHeight="336.0" prefWidth="600.0">
     <children>
 
         <Label text="Mensajes" layoutX="230.0" layoutY="74.0">
@@ -19,7 +19,7 @@
             </font>
         </Label>
 
-        <Button fx:id="closeMessagesDialogButton" layoutX="235.0" layoutY="335.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="112.0" style="-fx-background-color: #fe4344;" text="CERRAR" textFill="WHITE" />
+        <Button fx:id="closeMessagesDialogButton" layoutX="235.0" layoutY="200.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="112.0" style="-fx-background-color: #fe4344;" text="CERRAR" textFill="WHITE" />
 
     </children>
 </AnchorPane>

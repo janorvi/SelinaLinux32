@@ -17,11 +17,14 @@ import java.util.*
 
 class MainController: Initializable {
 
+    private val maintenanceFragmentName = "Maintenance.fxml"
     private val loginFragmentName = "Login.fxml"
     private val servicesFragmentName = "Services.fxml"
     private val routeTrackingFragmentName = "RouteTracking.fxml"
+    private val serviceSummaryFragmentName = "ServiceSummary.fxml"
 
     private val routesDialogName = "Routes.fxml"
+    private val notificationsDialogName = "Notifications.fxml"
     private val confirmCloseDialogName = "ConfirmClose.fxml"
     private val closeDialogName = "Close.fxml"
     private val messagesDialogName = "Messages.fxml"
@@ -31,6 +34,8 @@ class MainController: Initializable {
     private var servicesController: ServicesController? = null
     private var routeTrackingController: RouteTrackingController? = null
     private var routesController: RoutesController? = null
+    private var serviceSummaryController: ServiceSummaryController? = null
+    private var notificationsController: NotificationsController? = null
     private var confirmCloseController: ConfirmCloseController? = null
     private var closeController: CloseController? = null
     private var messagesController: MessagesController? = null
@@ -56,8 +61,20 @@ class MainController: Initializable {
 
     override fun initialize(location: URL?, resources: ResourceBundle?) {
         openFragment(loginFragmentName)
+
+        iconOneImageView?.image = Image(javaClass.getResourceAsStream("/images/icon_one_disabled.png"))
+        iconTwoImageView?.image = Image(javaClass.getResourceAsStream("/images/icon_two_disabled.png"))
+        iconThreeImageView?.image = Image(javaClass.getResourceAsStream("/images/icon_three_disabled.png"))
+        iconFourImageView?.image = Image(javaClass.getResourceAsStream("/images/icon_four_disabled.png"))
+        iconFiveImageView?.image = Image(javaClass.getResourceAsStream("/images/icon_five_disabled.png"))
+        logoImageView?.image = Image(javaClass.getResourceAsStream("/images/dashfleet.png"))
+        logoutImageView?.image = Image(javaClass.getResourceAsStream("/images/cerrar_sesion.png"))
+
         functionOneButton?.setOnAction {
-            openFragment(routeTrackingFragmentName)
+            openFragment(serviceSummaryFragmentName)
+        }
+        functionTwoButton?.setOnAction {
+            openDialog(notificationsDialogName)
         }
         functionThreeButton?.setOnAction {
             openDialog(confirmCloseDialogName)
@@ -73,13 +90,6 @@ class MainController: Initializable {
             setTopControlsVisibility(iconOneImageViewVisibility = false, iconTwoImageViewVisibility = false, iconThreeImageViewVisibility = false, iconFourImageViewVisibility = false, iconFiveImageViewVisibility = false)
             setBottomControlsVisibility(functionOneButtonVisibility = false, functionTwoButtonVisibility = false, functionThreeButtonVisibility = false, functionFourButtonVisibility = false, functionFiveButtonVisibility = false, logoutImageViewVisibility = false)
         }
-        iconOneImageView?.image = Image(javaClass.getResourceAsStream("/images/icon_one_disabled.png"))
-        iconTwoImageView?.image = Image(javaClass.getResourceAsStream("/images/icon_two_disabled.png"))
-        iconThreeImageView?.image = Image(javaClass.getResourceAsStream("/images/icon_three_disabled.png"))
-        iconFourImageView?.image = Image(javaClass.getResourceAsStream("/images/icon_four_disabled.png"))
-        iconFiveImageView?.image = Image(javaClass.getResourceAsStream("/images/icon_five_disabled.png"))
-        logoImageView?.image = Image(javaClass.getResourceAsStream("/images/dashfleet.png"))
-        logoutImageView?.image = Image(javaClass.getResourceAsStream("/images/cerrar_sesion.png"))
     }
 
     private fun openFragment(fragmentName: String){
@@ -102,6 +112,12 @@ class MainController: Initializable {
             routeTrackingFragmentName -> {
                 routeTrackingController = fragmentLoader.getController<RouteTrackingController>()
                 routeTrackingController?.closeRouteTrackingFragmentButton?.setOnAction {
+                    openFragment(servicesFragmentName)
+                }
+            }
+            serviceSummaryFragmentName -> {
+                serviceSummaryController = fragmentLoader.getController<ServiceSummaryController>()
+                serviceSummaryController?.successServiceSummaryButton?.setOnAction {
                     openFragment(servicesFragmentName)
                 }
             }
@@ -129,6 +145,12 @@ class MainController: Initializable {
                     openFragment(servicesFragmentName)
                     setTopControlsVisibility(iconOneImageViewVisibility = true, iconTwoImageViewVisibility = true, iconThreeImageViewVisibility = true, iconFourImageViewVisibility = true, iconFiveImageViewVisibility = true)
                     setBottomControlsVisibility(functionOneButtonVisibility = true, functionTwoButtonVisibility = true, functionThreeButtonVisibility = true, functionFourButtonVisibility = true, functionFiveButtonVisibility = true, logoutImageViewVisibility = true)
+                    dialogStage.close()
+                }
+            }
+            notificationsDialogName -> {
+                notificationsController = dialogLoader.getController()
+                notificationsController?.successNotificationButton?.setOnAction {
                     dialogStage.close()
                 }
             }
